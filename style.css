@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+.card {
+    position: relative;
+    border: 1px solid black;
+    width: 33%;
+    height: 10rem;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    text-align: center;
+    border: 1px solid black;
+    width: 10rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.25rem;
+}
+
+h2.pink {
+    background-color: #D59898;
+}
+
+h2.red {
+    color: #fff;
+    background-color: #C14543;
+}
+
+h2.yellow {
+    background-color: #E5D198;
+}
+
+.paragraph-text {
+    padding: 2.5rem 1rem 0.5rem;
+}
+
+.paragraph-text p {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.left, .center, .right {
+    background: #999999;
+}
+
+.paragraph-text p span {
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .flex-container {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        height: 16rem;
+        overflow: hidden;
+    }
+
+    .right {
+        grid-column: 1 / 3;
+        width: 100%;
+    }
+
+    .paragraph-text p span {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+        height: 12rem;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin-top: 3rem;
+    }
+
+    .paragraph-text p span {
+        display: none;
+    }
+}
